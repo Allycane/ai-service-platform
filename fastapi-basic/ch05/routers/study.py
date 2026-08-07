@@ -17,6 +17,7 @@ async def study_predict(features:Study) -> dict:
 
     # 3. dict -> DataFrame 타입으로 변경
     df = pd.DataFrame([data])
+    # 단일 항목이기 때문에 []로 묶는다
 
     # 4. predict 실행 = predict 결과는 리스트(배열) 형태로 반환됨
     prediction = model.predict(df)[0]
